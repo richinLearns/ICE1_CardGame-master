@@ -29,18 +29,12 @@ public class CardTrick {
             c.setSuit(Card.SUITS[rand.nextInt(4)]);
             magicHand[i]=c;
         }
-        
-        //insert code to ask the user for Card value and suit, create their card
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the value of your card:");
-        int userValue = scanner.nextInt();
-        scanner.nextLine();
-        System.out.print("Enter the suit of card:");
-        String userSuit = scanner.nextLine();
-        
-        Card userCard = new Card();
-        userCard.setValue(userValue);
-        userCard.setSuit(userSuit);
+        // Hard-coded luckyCard
+        Card luckyCard = new Card();
+        luckyCard.setValue(6); 
+        luckyCard.setSuit("Hearts");
+
+        System.out.println("Lucky card is: " + luckyCard.getValue() + " of " + luckyCard.getSuit());
         
         boolean found = false;
         for (Card card : magicHand) {
